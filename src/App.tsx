@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          God wil make a way !
+          God wil make a way, when there seems to be a way !!! 
         </p>
         <a
           className="App-link"
