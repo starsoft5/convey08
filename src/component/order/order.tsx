@@ -55,6 +55,7 @@ const OrderForm: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    alert("Submitting order...");
     e.preventDefault();
     try {
       alert(`${apiBaseUrl}/CreateOrderFunction`)
