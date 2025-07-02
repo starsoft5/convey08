@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
 interface Items {
   product: string;
@@ -56,9 +56,9 @@ const OrderForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("handleSubmit triggered"); // ✅ Add this line
+    console.log("handleSubmit called with order:", order);
     try {
-      const response = await axios.post("https://starsoft.azurewebsites.net/api/CreateOrderFunction", order);
+      const response = await axios.post(`${apiBaseUrl}/CreateOrderFunction`, order);
       alert('Order submitted successfully!');
       console.log(response.data);
     } catch (error) {
