@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+
 interface Items {
   product: string;
   quantity: number;
@@ -55,7 +57,7 @@ const OrderForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:7112/api/CreateOrderFunction', order);
+      const response = await axios.post(`${apiBaseUrl}/CreateOrderFunction/CreateOrderFunction`, order);
       alert('Order submitted successfully!');
       console.log(response.data);
     } catch (error) {
