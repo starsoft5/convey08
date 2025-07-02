@@ -56,6 +56,7 @@ const OrderForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("handleSubmit triggered"); // ✅ Add this line
     try {
       const response = await axios.post("https://starsoft.azurewebsites.net/api/CreateOrderFunction", order);
       alert('Order submitted successfully!');
