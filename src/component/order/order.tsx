@@ -58,8 +58,7 @@ const OrderForm: React.FC = () => {
     alert("Submitting order...");
     e.preventDefault();
     try {
-      alert(`${apiBaseUrl}/CreateOrderFunction`)
-      const response = await axios.post(`${apiBaseUrl}/CreateOrderFunction`, order);
+      const response = await axios.post("https://starsoft.azurewebsites.net/api/CreateOrderFunction", order);
       alert('Order submitted successfully!');
       console.log(response.data);
     } catch (error) {
