@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+// apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
 
 interface Items {
   product: string;
